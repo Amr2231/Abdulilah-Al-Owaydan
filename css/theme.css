@@ -1,0 +1,58 @@
+/* ===== Dark Mode (output.css has no dark:) ===== */
+:root {
+  --dm-bg: #f9fafb;
+  --dm-nav: #ffffff;
+  --dm-nav-border: #e5e7eb;
+  --dm-card: #ffffff;
+  --dm-section: #ffffff;
+  --dm-section-alt: #f3f4f6;
+  --dm-text: #111827;
+  --dm-muted: #6b7280;
+  --dm-border: #e5e7eb;
+  --dm-footer: #111827;
+}
+
+
+
+.dm-body { background-color: var(--dm-bg) !important; color: var(--dm-text) !important; }
+.dm-nav { background-color: var(--dm-nav) !important; border-bottom: 1px solid var(--dm-nav-border); }
+.dm-card { background-color: var(--dm-card) !important; color: var(--dm-text) !important; }
+.dm-card .dm-muted { color: var(--dm-muted) !important; }
+.dm-section { background-color: var(--dm-section) !important; }
+.dm-section-alt { background-color: var(--dm-section-alt) !important; }
+.dm-text { color: var(--dm-text) !important; }
+.dm-muted { color: var(--dm-muted) !important; }
+
+/* Nav active state */
+.nav-active { color: #BA8C42 !important; font-weight: 600; }
+
+/* ===== Section alternating (striped) ===== */
+.section-stripe .dm-section:nth-child(odd) { background-color: var(--dm-section) !important; }
+.section-stripe .dm-section-alt:nth-child(even) { background-color: var(--dm-section-alt) !important; }
+
+/* ===== Navbar responsive ===== */
+.navbar-inner { max-width: 80rem; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; height: 4rem; display: flex; justify-content: space-between; align-items: center; }
+@media (min-width: 640px) { .navbar-inner { padding-left: 1.5rem; padding-right: 1.5rem; } }
+@media (min-width: 1024px) { .navbar-inner { padding-left: 2rem; padding-right: 2rem; } }
+.nav-links { display: none; gap: 1.5rem; align-items: center; }
+@media (min-width: 768px) { .nav-links { display: flex; } }
+.nav-links a { color: var(--dm-muted); text-decoration: none; font-size: 0.9375rem; font-weight: 500; transition: color 0.2s; padding: 0.25rem 0; }
+.nav-links a:hover { color: #BA8C42; }
+.nav-actions { display: flex; align-items: center; gap: 0.5rem; }
+.nav-mobile-btn { display: flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; border-radius: 0.5rem; color: var(--dm-muted); background: transparent; border: none; cursor: pointer; }
+@media (min-width: 768px) { .nav-mobile-btn { display: none; } }
+.nav-mobile-btn:hover { background-color: rgba(0,0,0,0.05); }
+.nav-menu { display: none; position: absolute; top: 4rem; left: 0; right: 0; background: var(--dm-nav); border-bottom: 1px solid var(--dm-border); padding: 1rem 1.5rem; flex-direction: column; gap: 0.5rem; z-index: 50; }
+.nav-menu.open { display: flex; }
+@media (min-width: 768px) { .nav-menu { display: none !important; } }
+.nav-menu a { padding: 0.75rem; color: var(--dm-text); text-decoration: none; font-weight: 500; border-radius: 0.5rem; }
+.nav-menu a:hover { background: var(--dm-section-alt); }
+.btn-lang { padding: 0.5rem 1rem; background: #BA8C42; color: #fff; border: none; border-radius: 0.5rem; font-weight: 500; cursor: pointer; }
+.btn-lang:hover { background: #a67c3a; }
+.btn-theme { padding: 0.5rem; border-radius: 0.5rem; background: transparent; border: none; cursor: pointer; color: var(--dm-muted); }
+.btn-theme:hover { background: var(--dm-section-alt); }
+@media (max-width: 767px) {
+  .navbar-inner { padding-left: 1rem; padding-right: 1rem; }
+  body.pt-16 { padding-top: 4rem; }
+}
+.light-icon { display: none; }

@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --brand-burgundy: #4E2A17;
+  --color-brand-gold: #BA8C42;
+  --color-brand-green: #E5C47A;
+  --color-brand-navy: #FFE8B6;
+  --color-brand-cream: #FFFFFF;
+  /* Semantic colors for light/dark */
+  --color-background: #ffffff;
+  --color-foreground: #111827;
+  --color-card: #ffffff;
+  --color-muted-foreground: #6b7280;
+  --color-primary: #BA8C42;
+  --color-accent: #E5C47A;
+}
+
+@font-face {
+  font-family: "YearOfHandicrafts";
+  src: url("./fonts/TheYearofHandicrafts-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "YearOfHandicrafts";
+  src: url("./fonts/TheYearofHandicrafts-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "YearOfHandicrafts";
+  src: url("./fonts/TheYearofHandicrafts-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "YearOfHandicrafts";
+  src: url("./fonts/TheYearofHandicrafts-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "YearOfHandicrafts";
+  src: url("./fonts/TheYearofHandicrafts-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
