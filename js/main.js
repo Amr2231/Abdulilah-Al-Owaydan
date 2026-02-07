@@ -325,6 +325,14 @@ const translations = {
     hotelCtaTitle: "Elevate Your Hotel Service",
     hotelCtaSubtitle: "Partner with us for exceptional hospitality staffing",
     hotelCtaBtn: "Get In Touch →",
+    // Clients Section
+    clientsTitle: "Our Trusted Clients",
+    clientsSubtitle:
+      "We are proud to serve leading hotels, hospitals, and companies across the Kingdom",
+    clientsHotels: "Hotels",
+    clientsHospitals: "Hospitals",
+    clientsCompanies: "Companies",
+    clientsYears: "Years",
   },
   ar: {
     // Navigation
@@ -627,6 +635,13 @@ const translations = {
     hotelCtaTitle: "ارتقِ بخدمات فندقك",
     hotelCtaSubtitle: "تعاون معنا لتوفير أفضل كوادر الضيافة",
     hotelCtaBtn: "تواصل معنا →",
+    clientsTitle: "عملاؤنا الموثوقون",
+    clientsSubtitle:
+      "نفخر بخدمة الفنادق والمستشفيات والشركات الرائدة في جميع أنحاء المملكة",
+    clientsHotels: "فندق",
+    clientsHospitals: "مستشفى",
+    clientsCompanies: "شركة",
+    clientsYears: "سنة",
   },
 };
 
@@ -684,8 +699,7 @@ function showPage(pageName) {
       behavior: "smooth",
       block: "start",
     });
-  }
-  else {
+  } else {
     window.location.href = `index.html#${pageName}`;
   }
 }
@@ -854,9 +868,160 @@ function initAnimations() {
       observer.observe(section);
     });
 }
+// ============================================
+// CLIENTS CAROUSEL - Simple & Works Everywhere
+// ============================================
+
+function initClientsCarousel() {
+  const carousel = document.getElementById("clients-carousel");
+  const track = document.getElementById("clients-track");
+  const prevBtn = document.getElementById("clients-prev");
+  const nextBtn = document.getElementById("clients-next");
+  const progressBar = document.getElementById("clients-progress");
+
+  if (!carousel || !track) return;
+
+  /* ================= CONFIG ================= */
+  const config = {
+    autoPlaySpeed: 0.6,
+    dragSensitivity: 1.2,
+  };
+
+  /* ================= STATE ================= */
+  let currentPosition = 0;
+  let isDragging = false;
+  let isPaused = false;
+  let startX = 0;
+  let scrollStart = 0;
+  let animationId = null;
+
+  /* ================= CLONE (INFINITE) ================= */
+  const logos = Array.from(track.children);
+  logos.forEach((logo) => {
+    track.appendChild(logo.cloneNode(true));
+  });
+
+  /* ================= HELPERS ================= */
+  function getMaxScroll() {
+    return track.scrollWidth / 2;
+  }
+
+  function getScrollAmount() {
+    const w = window.innerWidth;
+
+    if (w <= 768) return carousel.offsetWidth / 2; // موبايل = 2
+    if (w <= 1024) return carousel.offsetWidth / 3;
+    return carousel.offsetWidth / 4;
+  }
+
+  function updatePosition(smooth = false) {
+    track.style.transition = smooth ? "transform 0.4s ease" : "none";
+    track.style.transform = `translateX(${-currentPosition}px)`;
+
+    if (progressBar) {
+      const progress = (currentPosition / getMaxScroll()) * 100;
+      progressBar.style.width = `${progress}%`;
+    }
+  }
+
+  function scrollTo(pos, smooth = true) {
+    const max = getMaxScroll();
+    currentPosition = Math.max(0, Math.min(pos, max));
+    updatePosition(smooth);
+  }
+
+  /* ================= AUTOPLAY (CONTINUOUS) ================= */
+  function startAutoPlay() {
+    stopAutoPlay();
+
+    function animate() {
+      if (!isPaused && !isDragging) {
+        currentPosition += config.autoPlaySpeed;
+
+        if (currentPosition >= getMaxScroll()) {
+          currentPosition = 0;
+        }
+
+        updatePosition(false);
+      }
+
+      animationId = requestAnimationFrame(animate);
+    }
+
+    animate();
+  }
+
+  function stopAutoPlay() {
+    if (animationId) {
+      cancelAnimationFrame(animationId);
+      animationId = null;
+    }
+  }
+
+  /* ================= DRAG ================= */
+  function handleDragStart(e) {
+    isDragging = true;
+    isPaused = true;
+
+    startX = e.type === "mousedown" ? e.pageX : e.touches[0].pageX;
+    scrollStart = currentPosition;
+
+    carousel.style.cursor = "grabbing";
+  }
+
+  function handleDragMove(e) {
+    if (!isDragging) return;
+    e.preventDefault();
+
+    const x = e.type === "mousemove" ? e.pageX : e.touches[0].pageX;
+    const diff = (startX - x) * config.dragSensitivity;
+
+    scrollTo(scrollStart + diff, false);
+  }
+
+  function handleDragEnd() {
+    if (!isDragging) return;
+
+    isDragging = false;
+    isPaused = false;
+    carousel.style.cursor = "grab";
+  }
+
+  /* ================= BUTTONS ================= */
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener("click", () => {
+      scrollTo(currentPosition - getScrollAmount());
+    });
+
+    nextBtn.addEventListener("click", () => {
+      scrollTo(currentPosition + getScrollAmount());
+    });
+  }
+
+  /* ================= EVENTS ================= */
+  carousel.addEventListener("mouseenter", () => (isPaused = true));
+  carousel.addEventListener("mouseleave", () => (isPaused = false));
+
+  carousel.addEventListener("mousedown", handleDragStart);
+  document.addEventListener("mousemove", handleDragMove);
+  document.addEventListener("mouseup", handleDragEnd);
+
+  carousel.addEventListener("touchstart", handleDragStart, { passive: true });
+  carousel.addEventListener("touchmove", handleDragMove, { passive: false });
+  carousel.addEventListener("touchend", handleDragEnd);
+
+  window.addEventListener("resize", () => {
+    scrollTo(currentPosition, false);
+  });
+
+  /* ================= INIT ================= */
+  carousel.style.cursor = "grab";
+  updatePosition(false);
+  startAutoPlay();
+}
 
 // ============================================
-// Form Validation - محسّن
+// Form Validation
 // ============================================
 
 function initContactForm() {
@@ -886,6 +1051,7 @@ function initApp() {
   initSmoothScroll();
   initAnimations();
   initContactForm();
+  initClientsCarousel();
 
   // إضافة مستمعي الأحداث
   const langBtn = document.getElementById("langToggle");
