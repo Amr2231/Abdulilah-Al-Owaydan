@@ -15,9 +15,6 @@ const translations = {
     OurServices: "Our Services",
     testimonials: "Testimonials",
     contact: "Contact",
-    price: "Pricing",
-    cart: "Cart",
-    makeAppointment: "Make an Appointment",
 
     // Hero Section
     since1999: "Since 1999",
@@ -101,9 +98,11 @@ const translations = {
       "A fully licensed and certified company by government authorities in the Kingdom",
     certified: "Certified Company",
     certifiedDesc: "Licensed by all relevant government authorities",
-    licenseNum: "License Number",
     licenseDesc:
       "Reference number certified by the Ministry of Human Resources",
+    Organizations: "Trusted by Leading Organizations",
+    OrganizationsDesc:
+      "Chosen by hotels, hospitals, and companies across multiple industries",
     legalOps: "Legal Operations",
     legalOpsDesc:
       "All our operations comply with official regulations and laws",
@@ -115,20 +114,15 @@ const translations = {
     company: "Abdulilah Al-Owaydan Company",
     footerDesc:
       "Pioneers in providing workforce solutions for hotels, hospitals, and companies since 1999",
-    licenseLabel: "License No: RLMA7603",
     quickLinks: "Quick Links",
     hotalServices: "Hotel Services",
     HealthcareServices: "Healthcare Services",
     allServices: "All Services",
     riyadh: "Riyadh, Kingdom of Saudi Arabia",
-    ministryLicense:
-      "Licensed by the Ministry of Human Resources and Social Development",
     rightsReserved: "© 2026 Abdulilah Al-Owaydan Company. All rights reserved.",
 
     // About Page
-    aboutUs: "About Us",
     aboutCompany: "About Company",
-    aboutBreadcrumb: "About Us",
     aboutHeroTitle: "About Company",
     aboutHeroDesc: "Learn about Abdulilah Al-Owaydan Company",
     ourStory: "Our Story",
@@ -138,7 +132,6 @@ const translations = {
     yearsExperience: "Years Experience",
     partnerClinics: "Partner Clinics",
     satisfactionRate: "Satisfaction Rate",
-    CasesCompleted: "Cases Completed",
     legalTitle: "Legal Compliance & Employee Benefits",
     legalSubtitle:
       "We operate in full compliance with Saudi regulations to ensure legally secure and reliable workforce solutions.",
@@ -159,11 +152,8 @@ const translations = {
     viewServices: "View Services",
 
     // Services
-    servicesDesc: "Integrated workforce and hospitality solutions",
     servicesIntroTitle: "Our Services",
     servicesIntroDesc:
-      "We offer a comprehensive range of services to meet the needs of various sectors",
-    servdesc:
       "We offer a comprehensive range of services to meet the needs of various sectors",
     hotelServicesTitle: "Hotel Services",
     hotelServicesDesc:
@@ -342,9 +332,6 @@ const translations = {
     OurServices: "خدماتنا",
     testimonials: "آراء العملاء",
     contact: "اتصل بنا",
-    price: "الأسعار",
-    cart: "السلة",
-    makeAppointment: "احجز موعد",
 
     // Hero Section
     since1999: "منذ عام 1999",
@@ -358,7 +345,6 @@ const translations = {
     businessPackages: "باقات قطاع الأعمال",
     businessPackagesDesc: "حلول توظيف متخصصة وشاملة للشركات",
     healthcareServices: "خدمات الرعاية الصحية",
-    healthcareDesc: "توظيف متخصص للقطاع الطبي",
     hotelServices: "خدمات الفنادق",
     hotelDesc: "حلول شاملة لقطاع الضيافة",
     learnMore: "اعرف المزيد ←",
@@ -424,10 +410,11 @@ const translations = {
     trustSubtitle: "شركة مرخصة ومعتمدة بالكامل من الجهات الحكومية في المملكة",
     certified: "شركة معتمدة",
     certifiedDesc: "مرخصة من جميع الجهات الحكومية ذات الصلة",
-    licenseNum: "رقم الترخيص",
-    licenseDesc: "رقم مرجعي معتمد من وزارة الموارد البشرية",
     legalOps: "عمليات قانونية",
     legalOpsDesc: "جميع عملياتنا تتوافق مع الأنظمة والقوانين الرسمية",
+    Organizations: "موثوق به من قبل المنظمات الرائدة",
+    OrganizationsDesc:
+      "مختار من قبل الفنادق والمستشفيات والشركات في صناعات متعددة",
     trustFooter: "نفخر بثقة عملائنا",
     trustFooterDesc:
       "منذ عام 1999، نواصل تقديم خدماتنا بأعلى معايير الجودة والاحترافية، مما يجعلنا الخيار الأول للعديد من المؤسسات الرائدة في المملكة",
@@ -436,19 +423,15 @@ const translations = {
     company: "شركة عبدالإله عيسي العويدان",
     footerDesc:
       "رواد في تقديم حلول القوى العاملة للفنادق والمستشفيات والشركات منذ 1999",
-    licenseLabel: "رقم الترخيص: RLMA7603",
     quickLinks: "روابط سريعة",
     hotalServices: "خدمات الفنادق",
     HealthcareServices: "خدمات الرعاية الصحية",
     allServices: "جميع الخدمات",
     riyadh: "الرياض، المملكة العربية السعودية",
-    ministryLicense: "مرخصة من وزارة الموارد البشرية والتنمية الاجتماعية",
     rightsReserved: "© 2026 شركة عبد الله العويدان. جميع الحقوق محفوظة.",
 
     // About Page
-    aboutUs: "من نحن",
     aboutCompany: "عن الشركة",
-    aboutBreadcrumb: "من نحن",
     aboutHeroTitle: "عن الشركة",
     aboutHeroDesc: "تعرف على شركة عبدالإله العويدان",
     ourStory: "قصتنا",
@@ -458,7 +441,6 @@ const translations = {
     yearsExperience: "سنوات الخبرة",
     partnerClinics: "شركاء النجاح",
     satisfactionRate: "نسبة الرضا",
-    CasesCompleted: "الحالات المكتملة",
     legalTitle: "الامتثال القانوني ومزايا الموظفين",
     legalSubtitle:
       "نعمل وفقًا للأنظمة السعودية لضمان حلول قوى عاملة قانونية وآمنة وموثوقة.",
@@ -479,11 +461,9 @@ const translations = {
     viewServices: "عرض الخدمات",
 
     // Services
-    servicesDesc: "حلول القوى العاملة والضيافة المتكاملة",
     servicesIntroTitle: "خدماتنا",
     servicesIntroDesc:
       "نقدم مجموعة متكاملة من الخدمات لتلبية احتياجات مختلف القطاعات",
-    servdesc: "نحن نقدم مجموعة شاملة من الخدمات لتلبية احتياجات مختلف القطاعات",
     hotelServicesTitle: "خدمات الفنادق",
     hotelServicesDesc:
       "نوفر كوادر متخصصة لجميع أقسام الفنادق من الاستقبال إلى خدمة الغرف والمطاعم",
@@ -739,9 +719,6 @@ function navigateTo(page) {
         about: "about.html",
         services: "services.html",
         contact: "contact.html",
-        pricing: "pricing.html",
-        cart: "cart.html",
-        appointment: "appointment.html",
       };
       if (pageMap[page]) window.location.href = pageMap[page];
     }
