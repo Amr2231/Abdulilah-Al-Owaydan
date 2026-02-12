@@ -66,32 +66,37 @@ const translations = {
     // Testimonials
     testimonialsTitle: "Trusted by Professionals",
     testimonialsSubtitle:
-      "Real experiences from professionals who trust our company for quality, reliability, and long-term partnership",
-    t1Name: "Ahmed Hassan",
-    t1Role: "Clinic Director",
-    t1Text:
-      "A highly professional team with outstanding attention to detail. The quality of their work exceeded our expectations.",
-    t2Name: "Lina Mahmoud",
-    t2Role: "Restorative Specialist",
-    t2Text:
-      "Reliable, fast, and extremely easy to work with. Communication is always clear and deadlines are consistently met.",
-    t3Name: "Omar El Sherif",
-    t3Role: "Implant Consultant",
-    t3Text:
-      "Their precision and workflow efficiency have significantly improved our daily operations and patient satisfaction.",
-    t4Name: "Nour El Din",
-    t4Role: "Medical Center Owner",
-    t4Text:
-      "A trusted partner we rely on for long-term collaboration. Quality, transparency, and professionalism at every level.",
-    t5Name: "Karim Adel",
-    t5Role: "Senior Consultant",
-    t5Text:
-      "Exceptional service quality with modern technology. Our patients immediately notice the difference.",
-    t6Name: "Salma Youssef",
-    t6Role: "Clinical Manager",
-    t6Text:
-      "Smooth workflow, strong support team, and excellent results. We feel confident recommending them to our partners.",
+      "Real feedback from partners we’ve worked with across different sectors",
 
+    t1Name: "Abdullah Al-Qahtani",
+    t1Role: "Hotel Operations Manager",
+    t1Text:
+      "We worked with the company on multiple projects, and their commitment and organization were clear from day one.",
+
+    t2Name: "Noura Al-Otaibi",
+    t2Role: "HR Manager",
+    t2Text:
+      "Communication was always clear, and procedures were handled smoothly without constant follow-up.",
+
+    t3Name: "Fahad Al-Shammari",
+    t3Role: "Operations Supervisor",
+    t3Text:
+      "The quality of staff provided was reliable, and performance improved steadily over time.",
+
+    t4Name: "Mohammed Al-Subaie",
+    t4Role: "Business Owner",
+    t4Text:
+      "We look for long-term partners, and the company proved its reliability through consistent results.",
+
+    t5Name: "Khalid Al-Harbi",
+    t5Role: "Project Manager",
+    t5Text:
+      "Their flexibility and practical solutions helped us a lot, especially during peak periods.",
+
+    t6Name: "Reem Al-Zahrani",
+    t6Role: "Operations Manager",
+    t6Text:
+      "Professional team with continuous support even after operations started. Overall, a smooth experience.",
     // Trust Section
     trustTitle: "Trust & Reliability",
     trustSubtitle:
@@ -377,34 +382,38 @@ const translations = {
       "رؤيتنا أن نكون الشركة الرائدة في تقديم حلول القوى العاملة الشاملة للفنادق في المملكة، وتوفير كوادر ماهرة لجميع شركات الفنادق وخدمات الضيافة لنكون الشريك الاستراتيجي الأول للفنادق في توفير الموارد البشرية التي تعزز جودة الخدمة.",
 
     // Testimonials
-    testimonialsTitle: "موثوق به من قبل المحترفين",
-    testimonialsSubtitle:
-      "تجارب حقيقية من متخصصين يثقون في شركتنا لما نقدمه من جودة، اعتمادية، وشراكات طويلة الأمد",
-    t1Name: "أحمد حسن",
-    t1Role: "مدير العيادة",
-    t1Text:
-      "فريق محترف للغاية مع اهتمام ممتاز بالتفاصيل. جودة عملهم فاقت توقعاتنا.",
-    t2Name: "لينا محمود",
-    t2Role: "أخصائية ترميم",
-    t2Text:
-      "موثوق، سريع، وسهل جدًا في التعامل معه. التواصل دائمًا واضح والمواعيد النهائية يتم الالتزام بها باستمرار.",
-    t3Name: "عمر الشريف",
-    t3Role: "استشاري زراعة الأسنان",
-    t3Text:
-      "لقد حسّنت دقتهم وكفاءة سير العمل لدينا بشكل كبير في عملياتنا اليومية ورضا المرضى.",
-    t4Name: "نور الدين",
-    t4Role: "مالك المركز الطبي",
-    t4Text:
-      "شريك موثوق نعتمد عليه للتعاون طويل الأمد. الجودة والشفافية والمهنية على كل المستويات.",
-    t5Name: "كريم عادل",
-    t5Role: "كبير المستشارين",
-    t5Text:
-      "جودة خدمة استثنائية مع التكنولوجيا الحديثة. يلاحظ مرضانا الفرق على الفور.",
-    t6Name: "سلمى يوسف",
-    t6Role: "مديرة العيادة",
-    t6Text:
-      "سير عمل سلس، فريق دعم قوي، ونتائج ممتازة. نشعر بالثقة في التوصية بهم لشركائنا.",
+    testimonialsTitle: "موثوقون من قبل محترفين",
+    testimonialsSubtitle: "آراء حقيقية من شركائنا في مختلف القطاعات",
 
+    t1Name: "عبدالله القحطاني",
+    t1Role: "مدير عمليات فندقية",
+    t1Text:
+      "تعاملنا مع الشركة في أكثر من مشروع، وكان الالتزام والتنظيم واضحين منذ البداية.",
+
+    t2Name: "نورة العتيبي",
+    t2Role: "مديرة موارد بشرية",
+    t2Text:
+      "التواصل كان واضحًا دائمًا، والإجراءات تمت بسلاسة بدون الحاجة للمتابعة المستمرة.",
+
+    t3Name: "فهد الشمري",
+    t3Role: "مشرف تشغيل",
+    t3Text:
+      "جودة الكوادر المقدمة كانت جيدة، ومع الوقت لاحظنا تحسنًا واضحًا في الأداء.",
+
+    t4Name: "محمد السبيعي",
+    t4Role: "مالك منشأة",
+    t4Text:
+      "نبحث دائمًا عن شراكات طويلة المدى، والشركة أثبتت اعتماديتها من خلال النتائج.",
+
+    t5Name: "خالد الحربي",
+    t5Role: "مدير مشاريع",
+    t5Text:
+      "المرونة في التعامل والحلول العملية ساعدتنا كثيرًا خاصة في فترات الضغط.",
+
+    t6Name: "ريم الزهراني",
+    t6Role: "مديرة تشغيل",
+    t6Text:
+      "فريق محترف ودعم مستمر حتى بعد بدء التشغيل. التجربة بشكل عام مريحة.",
     // Trust Section
     trustTitle: "الثقة والموثوقية",
     trustSubtitle: "شركة مرخصة ومعتمدة بالكامل من الجهات الحكومية في المملكة",
