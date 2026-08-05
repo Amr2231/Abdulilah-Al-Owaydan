@@ -1,0 +1,15 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# Node (in case Tailwind CLI / npm is used locally)
+node_modules/
+npm-debug.log*
+
+# Env
+.env
